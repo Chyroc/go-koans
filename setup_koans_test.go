@@ -1,62 +1,81 @@
 package go_koans
 
 import (
-	"fmt"
-	"io/ioutil"
-	"os"
-	"path"
-	"runtime"
-	"strings"
 	"testing"
 )
 
-const (
-	__string__       string  = "impossibly lame value"
-	__int__          int     = -1
-	__positive_int__ int     = 42
-	__byte__         byte    = 255
-	__bool__         bool    = false // ugh
-	__boolean__      bool    = true  // oh well
-	__float32__      float32 = -1.0
-	__delete_me__    bool    = false
-)
+func TestAboutArrays(t *testing.T) {
+	AboutArrays()
+}
 
-var __runner__ runner = nil
-
-func TestKoans(t *testing.T) {
+func TestAboutBasics(t *testing.T) {
 	aboutBasics()
-	aboutStrings()
-	aboutArrays()
+}
+
+func TestAboutStrings(t *testing.T) {
+	AboutStrings()
+}
+
+func TestAboutSlices(t *testing.T) {
 	aboutSlices()
+}
+
+func TestAboutTypes(t *testing.T) {
 	aboutTypes()
+}
+
+func TestAboutControlFlow(t *testing.T) {
 	aboutControlFlow()
+}
+
+func TestAboutEnumeration(t *testing.T) {
 	aboutEnumeration()
+}
+
+func TestAboutAnonymousFunctions(t *testing.T) {
 	aboutAnonymousFunctions()
+}
+
+func TestAboutVariadicFunctions(t *testing.T) {
 	aboutVariadicFunctions()
+}
+
+func TestAboutFiles(t *testing.T) {
 	aboutFiles()
+}
+
+func TestAboutInterfaces(t *testing.T) {
 	aboutInterfaces()
+}
+
+func TestAboutCommonInterfaces(t *testing.T) {
 	aboutCommonInterfaces()
+}
+
+func TestAboutMaps(t *testing.T) {
 	aboutMaps()
+}
+
+func TestAboutPointers(t *testing.T) {
 	aboutPointers()
+}
+
+func TestAboutStructs(t *testing.T) {
 	aboutStructs()
+}
+
+func TestAboutAllocation(t *testing.T) {
 	aboutAllocation()
+}
+
+func TestAboutChannels(t *testing.T) {
 	aboutChannels()
+}
+
+func TestAboutConcurrency(t *testing.T) {
 	aboutConcurrency()
+}
+
+func TestAboutPanics(t *testing.T) {
 	aboutPanics()
-
-	fmt.Printf("\n%c[32;1mYou won life. Good job.%c[0m\n\n", 27, 27)
-}
-
-func assert(o bool) {
-	if !o {
-		fmt.Printf("\n%c[35m%s%c[0m\n\n", 27, __getRecentLine(), 27)
-		os.Exit(1)
-	}
-}
-
-func __getRecentLine() string {
-	_, file, line, _ := runtime.Caller(2)
-	buf, _ := ioutil.ReadFile(file)
-	code := strings.TrimSpace(strings.Split(string(buf), "\n")[line-1])
-	return fmt.Sprintf("%v:%d\n%s", path.Base(file), line, code)
 }
