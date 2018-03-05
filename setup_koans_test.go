@@ -5,6 +5,18 @@ import (
 	"testing"
 )
 
+func TestAboutArrays(t *testing.T) {
+	aboutArrays()
+}
+
+func TestAboutBasics(t *testing.T) {
+	aboutBasics()
+}
+
+func TestAboutStrings(t *testing.T) {
+	AboutStrings()
+}
+
 func TestKoans(t *testing.T) {
 	aboutSlices()
 	aboutTypes()

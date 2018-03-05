@@ -1,8 +1,6 @@
 package go_koans
 
-import "testing"
-
-func TestAboutArrays(t *testing.T) {
+func aboutArrays() {
 	fruits := [4]string{"apple", "orange", "mango"}
 
 	assert(fruits[0] == "apple")  // indexes begin at 0
@@ -25,9 +23,9 @@ func TestAboutArrays(t *testing.T) {
 	tasty_fruits[0] = "orange" // are their shared roots truly identical?
 
 	assert(fruits[0] == "orange") // has this element remained the same?
-	assert(fruits[1] == "mango") // how about the second?
-	assert(fruits[2] == "")      // surely one of these must have changed
-	assert(fruits[3] == "")      // but who can know these things
+	assert(fruits[1] == "mango")  // how about the second?
+	assert(fruits[2] == "")       // surely one of these must have changed
+	assert(fruits[3] == "")       // but who can know these things
 
 	veggies := [...]string{"carrot", "pea"}
 

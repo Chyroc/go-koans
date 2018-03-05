@@ -2,10 +2,9 @@ package go_koans
 
 import (
 	"fmt"
-	"testing"
 )
 
-func TestAboutStrings(t *testing.T) {
+func AboutStrings() {
 	assert("a"+"bc" == "abc") // string concatenation need not be difficult
 	assert(len("abc") == 3)   // and bounds are thoroughly checked
 

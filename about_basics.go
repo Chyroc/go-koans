@@ -1,10 +1,6 @@
 package go_koans
 
-import (
-	"testing"
-)
-
-func TestAboutBasics(t *testing.T) {
+func aboutBasics() {
 	assert(__boolean__ == true)  // what is truth?
 	assert(__boolean__ != false) // in it there is nothing false
 
@@ -29,7 +25,7 @@ func TestAboutBasics(t *testing.T) {
 		f float32
 		s string
 	}
-	assert(c.x == 0)     // and types within composite types
-	assert(c.f == 0) // which match the other types
-	assert(c.s == "")  // in a typical way
+	assert(c.x == 0)  // and types within composite types
+	assert(c.f == 0)  // which match the other types
+	assert(c.s == "") // in a typical way
 }
