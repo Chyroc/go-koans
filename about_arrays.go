@@ -1,6 +1,8 @@
 package go_koans
 
-func aboutArrays() {
+import "fmt"
+
+func AboutArrays() {
 	fruits := [4]string{"apple", "orange", "mango"}
 
 	assert(fruits[0] == "apple")  // indexes begin at 0
@@ -17,15 +19,16 @@ func aboutArrays() {
 	assert(tasty_fruits[0] == "orange") // slices of arrays share some data
 	assert(tasty_fruits[1] == "mango")  // albeit slightly askewed
 
+	fmt.Printf("%s ", tasty_fruits)
 	assert(len(tasty_fruits) == 2) // its length is manifest
 	assert(cap(tasty_fruits) == 3) // but its capacity is surprising!
 
-	tasty_fruits[0] = "orange" // are their shared roots truly identical?
+	tasty_fruits[0] = "lemon" // are their shared roots truly identical?
 
-	assert(fruits[0] == "orange") // has this element remained the same?
-	assert(fruits[1] == "mango")  // how about the second?
-	assert(fruits[2] == "")       // surely one of these must have changed
-	assert(fruits[3] == "")       // but who can know these things
+	assert(fruits[0] == "apple") // has this element remained the same?
+	assert(fruits[1] == "lemon") // how about the second?
+	assert(fruits[2] == "mango") // surely one of these must have changed
+	assert(fruits[3] == "")      // but who can know these things
 
 	veggies := [...]string{"carrot", "pea"}
 
